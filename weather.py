@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 def extreme_temperature_plot(year1, year2):
     
+    #Weather stations in Denmark recorded high and low temp per day from 1950 to 2021
     df = pd.read_csv('2573058.csv')
     dfm=pd.read_csv('2573193.csv')
 
@@ -86,4 +87,5 @@ def extreme_temperature_plot(year1, year2):
     for spine in plt.gca().spines.values():
         spine.set_visible(False)
     return plt.show()
+#Function requires two years between 2021 and 1950
 extreme_temperature_plot(2010,1975)
